@@ -1,0 +1,55 @@
+button
+  appearance: none
+  border: none
+  padding: 0
+  margin: 0
+  outline: none
+  background: none
+  cursor: pointer
+
+.btn
+  padding: .6em 1.5em
+  border-radius: 3px
+  transition: $hover-transition
+
+.btn-primary
+  @extend .btn
+  color: $container-background
+  background-color: $primary-color
+
+  &:hover
+    background-color: $primary-color-lighter
+    transition: $hover-transition
+
+
+.btn-secondary
+  @extend .btn
+  color: $container-background
+  background-color: $secondary-color
+
+  &:hover
+    background-color: $secondary-color-lighter
+    transition: $hover-transition
+
+.btn-tertiary
+  @extend .btn
+  color: $container-background
+  background-color: $tertiary-color
+
+  &:hover
+    background-color: $tertiary-color-lighter
+    transition: $hover-transition
+
+
+.btn-primary-full
+  @extend .btn-primary
+  width: 100%
+
+
+.btn-secondary-full
+  @extend .btn-secondary
+  width: 100%
+
+.btn-secondary-full
+  @extend .btn-tertiary
+  width: 100%

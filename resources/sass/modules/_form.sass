@@ -1,0 +1,136 @@
+.form-row
+  display: block
+  margin: 10px
+  width: 100%
+  position: relative
+
+  label
+    font-size: 15px
+
+  .form-input
+    position: absolute
+    left: 0
+    opacity: 0
+    cursor: pointer
+    height: 26px
+    width: 26px
+    z-index: 1
+
+  .form-checkbox
+    @extend .form-input
+
+  .label-checkbox::before
+    content: ''
+    display: block
+    float: left
+    width: 26px
+    height: 26px
+    border-radius: 5px
+    background-image: url('/images/svg/checkbox.svg')
+    margin-right: 10px
+
+  .form-checkbox:checked ~ .label-checkbox::before
+    background-image: url('/images/svg/checkbox-checked.svg')
+
+  .form-radio
+    @extend .form-input
+
+  .label-radio::before
+    content: ''
+    display: block
+    float: left
+    width: 26px
+    height: 26px
+    border-radius: 5px
+    background-image: url('/images/svg/radio.svg')
+    margin-right: 10px
+
+  .form-radio:checked ~ .label-radio::before
+    background-image: url('/images/svg/radio-checked.svg')
+
+  textarea
+    resize: none
+    overflow: auto
+    background-color: white
+    border-radius: 5px
+    border: 1px solid $tertiary-color-lightest
+    outline: none
+    font-family: $primary-font
+
+  .form-text
+    display: block
+    color: $tertiary-color-lightest
+    font-weight: bold
+
+
+.select-wrapper
+  width: 10em
+  height: 2em
+  padding: 0
+  margin-top: 1em
+  border: 1px solid $primary-color-lighter
+  border-radius: 3px
+  position: relative
+  cursor: pointer
+  background-color: white
+
+  .select-input
+    width: 100%
+    height: 2em
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+    img
+      height: 2em
+      width: 2em
+      position: absolute
+      top: -1px
+      right: -3px
+
+
+
+      // usage od form
+      //<div class="form-row">
+      //<input type="checkbox" class="form-checkbox" >
+      //<label class="label-checkbox">Colored Lenses</label>
+      //</div>
+      //
+      //<div class="form-row">
+      //<input type="radio" checked="checked" class="form-radio" name="radio" >
+      //<label class="label-radio">Colored Lenses</label>
+      //</div>
+      //
+      //<div class="form-row">
+      //<input type="radio" class="form-radio" name="radio">
+      //<label class="label-radio">Colored Lenses</label>
+      //</div>
+      //
+      //<div class="form-row">
+      //<input type="radio" class="form-radio" name="radio">
+      //<label class="label-radio">Colored Lenses</label>
+      //</div>
+      //
+      //<div class="form-row">
+      //<input type="radio" class="form-radio" name="radio">
+      //<label class="label-radio">Colored Lenses</label>
+      //</div>
+      //
+      //<div class="form-row">
+      //<label class="form-text">Colored Lenses</label>
+      //<textarea></textarea>
+      //</div>
+      //
+      //<div class="form-row">
+      //<div class="power">
+      //<div class="select-wrapper">
+      //<div class="select-input">
+      //<img src="/images/svg/selector.svg">
+      //</div>
+      //</div>
+      //</div>
+      //</div>
+
+

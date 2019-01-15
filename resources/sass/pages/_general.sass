@@ -1,0 +1,74 @@
+
+
+$hover-transition: 0.15s ease
+$desktop-move-transition: 0.3s ease
+$mobile-move-transition: 0.4s ease
+$tablet-move-transition: 0.5s ease
+
+*
+  box-sizing: border-box
+
+body
+  font-family: $primary-font, sans-serif
+  background-color: $container-background
+  line-height: 1.4em
+  color: $text-color
+
+  &.lock
+    overflow: hidden
+
+  @include bpMin(lg)
+    background-color: $body-color
+
+b, strong
+  font-weight: 700
+
+.icon
+  display: inline-block
+  fill: $tertiary-color
+
+.content
+  padding: 1em
+
+.wrapper
+  display: block
+  width: 100%
+  padding: 0 $grid-gutter-width
+
+.wrapper-alternative
+  @media only screen and (max-width: ($container-size + ($grid-gutter-width / 2)))
+    display: block
+    width: 100%
+    padding: 0 $grid-gutter-width / 2
+
+
+.box
+  @include bpMin(lg)
+    background: $container-background
+    box-shadow: $box-shadow
+
+.box-padding
+  @extend .box
+  padding: 1.5em 1.5em
+
+a
+  outline: 0
+  cursor: pointer
+  text-decoration: none
+  color: $primary-color
+
+.container
+  position: relative
+  display: block
+  width: 100%
+  max-width: $container-size
+  margin: 0 auto
+  padding: 0
+
+// temporary
+
+.alert
+  color: red
+  width: 100%
+  text-align: center
+  padding: 2em

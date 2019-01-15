@@ -1,0 +1,126 @@
+.cart-wrapper
+  margin-top: 1.5em
+
+  .cart-products-list
+    background-color: $container-background
+    padding: 2em
+    box-shadow: $box-shadow
+
+    h2
+      font-size: $h2-font-size
+      padding: 0 0 1.5em 0
+
+    .cart-product
+      padding: 1em 0
+      margin-bottom: 2em
+      border-bottom: 1px solid $desktop-header-top-border-color
+      display: flex
+      flex-flow: row wrap
+
+      .cart-product-image
+          img
+            width: 6em
+
+      .card-product-description
+        flex: 2
+        padding: 0 1em
+
+        strong
+          display: block
+          font-weight: bold
+          font-size: 1.1em
+          padding-bottom: 0.4em
+          &:hover
+            color: $secondary-color
+
+        td
+          width: 90px
+          padding: 0.15em 0
+          font-size: 0.9em
+          color: $tertiary-color-lighter
+
+        @include bpMax(sm)
+          flex: 1 80%
+          padding: 0 1em
+
+      .card-product-quantity
+        flex: 1
+
+        .trash-icon
+          display: block
+          width: 1.8em
+          height: 1.8em
+          margin: 2em 0 0 3.2em
+          fill: #C22020
+
+        @include bpMax(sm)
+          flex: 1 auto
+          padding: 1em 0
+
+      .card-product-price
+        flex: 1
+        text-align: center
+
+        span
+          font-weight: bold
+
+        @include bpMax(sm)
+          flex: 1 auto
+          padding: 1em 0
+
+  .cart-sidebar
+    padding: 2em
+    background-color: $container-background
+    text-align: center
+    box-shadow: $box-shadow
+
+    h2
+      font-size: $h2-font-size
+      padding: 0 0 1em 0
+
+    p
+      line-height: 1.6em
+
+    strong
+      font-weight: bold
+      line-height: 1.8em
+
+    .safe-data
+      .icon
+        display: block
+        width: 4em
+        height: 4em
+        margin: 2.5em auto 1.5em auto
+        fill: $primary-color
+
+    .icon
+      display: block
+      width: 8em
+      height: 6em
+      margin: 0 auto 1.5em auto
+
+    ul
+      text-align: left
+      padding: 2em 0
+
+      li
+        text-align: left
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 2em
+        margin: 1em 0
+
+        .icon
+          display: block
+          width: 2em
+          height: 2em
+          float: left
+          margin: 0 0.7em 0 0
+          fill: #5F9C0C
+
+    @include bpMax(lg)
+      display: none
+
+
+

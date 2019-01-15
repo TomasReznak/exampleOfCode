@@ -1,0 +1,29 @@
+// Creates media min-width: {value} media query based on $grid-breakpoints variable key in config/_mediaquery.sass (eg. xs, sm, md, lg or xl)
+=bpMin($grid-breakpoint)
+  @if map-has-key($grid-breakpoints, $grid-breakpoint)
+    @media only screen and (min-width: #{inspect(map-get($grid-breakpoints, $grid-breakpoint))})
+      @content
+  @else
+    @warn "Unfortunately, no value could be retrieved from `#{$grid-breakpoint}`. " + "Available breakpoints are: #{map-keys($grid-breakpoints)}."
+
+// Creates media max-width: {value} - 1px media query based on $grid-breakpoints variable key in config/_mediaquery.sass (eg. xs, sm, md, lg or xl)
+=bpMax($grid-breakpoint)
+  @if map-has-key($grid-breakpoints, $grid-breakpoint)
+    @media only screen and (max-width: #{inspect(map-get($grid-breakpoints, $grid-breakpoint) - 1)})
+      @content
+  @else
+    @warn "Unfortunately, no value could be retrieved from `#{$grid-breakpoint}`. " + "Available breakpoints are: #{map-keys($grid-breakpoints)}."
+
+// Creates media min-width: 1200px media query and places all of the styles into hover
+// It is used as bug fix for iOS devices that trigger hover on click
+=hover
+  @include bpMin(xl)
+    &:hover
+      @content
+
+// z-index function that returns value based on key from variable $z-layers in config/_general.sass
+@function z($layer)
+  @if not map-has-key($z-layers, $layer)
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted."
+
+  @return map-get($z-layers, $layer)

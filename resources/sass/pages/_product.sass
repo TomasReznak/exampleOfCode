@@ -1,0 +1,164 @@
+.product-detail
+	padding: 2em 0
+
+	.product-detail-image img
+		width: 250px
+
+	p
+	  margin: 2em 0
+
+	ul
+		display: flex
+		width: 100%
+		height: 2em
+		margin-top: 3em
+		border-bottom: 1px solid $tertiary-color-lighter
+
+		li
+			display: flex
+			padding: 0 0.6em
+
+		.active
+			font-weight: bold
+			height: 100%
+			border-bottom: 3px solid $tertiary-color-lighter
+
+	h1
+		font-size: 1.5em
+		font-weight: bold
+		margin: 0.5em 0 1.5em 0
+
+	.detail-product-sidebar
+
+		padding: 0 1em
+
+		.row
+			user-select: none
+
+			strong
+				display: block
+				font-weight: bold
+				color: $tertiary-color
+
+			span
+				display: block
+				margin: 1.2em 1em 0.2em 1em
+
+			.quantity
+				margin: 1.2em 0
+
+				strong
+					padding-bottom: 1.2em
+
+			.diameter
+
+				span
+					color: $tertiary-color-lighter
+
+			.base-curve
+				margin-top: 1.2em
+
+				span
+					color: $tertiary-color-lighter
+
+			.power
+				margin-top: 1.2em
+
+			.availability
+				margin-top: 1.2em
+
+
+
+		.product-detail-price
+			display: flex
+
+			.action-price
+				display: inline-block
+				color: $secondary-color
+				font-size: 1.2em
+				margin-right: 1em
+
+				strong
+					display: inline-block
+					font-size: 1.4em
+					font-weight: bold
+					color: $secondary-color
+
+			.regular-price
+				display: flex
+				text-decoration: line-through
+				align-self: flex-end
+				font-size: 0.9em
+				color: $tertiary-color
+				font-weight: bold
+
+.select-wrapper
+	width: 90%
+	height: 2em
+	padding: 0
+	margin-top: 1em
+	border: 1px solid $primary-color-lighter
+	border-radius: 3px
+	position: relative
+	cursor: pointer
+
+	.select-input
+		width: 100%
+		height: 2em
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+
+		img
+			height: 2em
+			width: 2em
+			position: absolute
+			top: -1px
+			right: -3px
+
+.reviews
+	width: 100%
+	margin-top: 6em
+
+	h3
+		text-align: center
+		font-size: 1.4em
+		margin: 1em
+
+	.rating
+		text-align: center
+		font-size: 1.8em
+		unicode-bidi: bidi-override
+
+		.icon
+			width: 1em
+			height: 1em
+
+		svg
+			display: inline-block
+			position: relative
+			width: 1em
+			height: 1em
+			fill: $desktop-header-top-border-color
+			&:hover
+				fill: $secondary-color
+
+input[type="submit"]
+	width: 95%
+	color: $container-background
+	background-color: $secondary-color
+	border: none
+	margin: 2em auto
+	padding: 0.8em
+	font-size: 1.2em
+	cursor: pointer
+
+.security
+	width: 100%
+
+	h3
+		font-style:
+		text-align: center
+		font-size: 1.4em

@@ -1,0 +1,160 @@
+$padding: ( xs: 10px, sm: 20px, md: 30px, lg: 40px )
+
+$margin: ( xs: 10px, sm: 20px, md: 30px, lg: 40px )
+
+
+
+@each $element, $size in $padding
+  .p-#{$element}
+    padding: $size
+
+@each $element, $size in $padding
+  .pt-#{$element}
+    padding-top: $size
+
+@each $element, $size in $padding
+  .pr-#{$element}
+    padding-right: $size
+
+@each $element, $size in $padding
+  .pb-#{$element}
+    padding-bottom: $size
+
+@each $element, $size in $padding
+  .pl-#{$element}
+    padding-left: $size
+
+
+@each $element, $size in $margin
+  .m-#{$element}
+    margin: $size
+
+@each $element, $size in $margin
+  .mt-#{$element}
+    margin-top: $size
+
+@each $element, $size in $margin
+  .mr-#{$element}
+    margin-right: $size
+
+@each $element, $size in $margin
+  .mb-#{$element}
+    margin-bottom: $size
+
+@each $element, $size in $margin
+  .ml-#{$element}
+    margin-left: $size
+
+
+.half-width
+  width: 50%
+
+.full-width
+  width: 100%
+
+.fl-left
+  float: left
+
+.fl-right
+  float: right
+
+.text-left
+  text-align: left
+
+.text-right
+  text-align: right
+
+.text-center
+  text-align: center
+
+.text-just
+  text-align: justify
+
+.align-top
+  vertical-align: top
+
+.align-bottom
+  vertical-align: bottom
+
+.align-middle
+  vertical-align: middle
+
+
+//----positions----
+
+.fixed
+  position: fixed
+
+.relative
+  position: relative
+
+.absolute
+  position: absolute
+
+.static
+  position: static
+
+.pin-top-right
+  top: 0
+  right: 0
+
+.pin-top-left
+  top: 0
+  left: 0
+
+.pin-bottom-right
+  bottom: 0
+  right: 0
+
+.pin-bottom-left
+  bottom: 0
+  left: 0
+
+
+//----display values----
+
+.inline
+  display: inline
+
+.block
+  display: block
+
+.inline-block
+  display: inline-block
+
+.hide
+  display: none
+
+.flex
+  display: flex
+
+.bold
+  font-weight: bold
+
+.regular
+  font-weight: normal
+
+.italic
+  font-style: italic
+
+.weight-normal
+  font-weight: 400
+
+.bigger-text
+  font-size: 1.2em
+
+.big-text
+  font-size: 1.1em
+
+.small-text
+  font-size: 0.9em
+
+.smaller-text
+  font-size: 0.75em
+
+
+.shadow
+  box-shadow: $box-shadow
+
+.clear
+  clear: both
